@@ -189,3 +189,135 @@ for i in list1:
     
 print(value)
     
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+
+                            Online Python Compiler.
+                Code, Compile, Run and Debug python program online.
+Write your code in this editor and press "Run" button to execute it.
+
+'''
+
+#linear search
+# number=12;
+# list1=[1,2,3,4,5,5,6,12,11,10];
+# for i in range(len(list1)):
+#     if number==list1[i]:
+#         print("found at ",i);
+#         break;
+
+#binary search
+# number=16;
+# list1=[1,2,3,4,5,5,6,12,14,17];
+
+# low=0;
+# high=len(list1)-1;
+
+# while low<=high:
+#     mid=low+(high-low)//2;
+#     if list1[mid]==number:
+#         print("found");
+#         break;
+#     elif list1[mid]<number:
+#         low=mid+1;
+#     else:
+#         high=mid-1;
+
+
+# def factorial(number):
+#         if number==0:
+#             return 1;
+#         else:
+#             return number*factorial(number-1);
+
+# print(factorial(5))
+
+        
+class programs:
+    def factorial(self,number):
+        if number==0:
+            return 1;
+        else:
+            return number*self.factorial(number-1);
+    
+    def fibonacchi(self,number):
+        n1=0
+        n2=1
+        count=0;
+        if number==1:
+            print(n1);
+        else:
+            while count<number:
+                print(n1);
+                nth=n1+n2;
+                n1=n2;
+                n2=nth;
+                count=count+1;
+    def selectionSort(self):
+        list1=[1,4,2,5,6,7,9];
+        for i in range(0,len(list1)-1):
+            for j in range(i+1,len(list1)):
+                if list1[i]>list1[j]:
+                    c=list1[i];
+                    list1[i]=list1[j];
+                    list1[j]=c;
+        print(list1);
+    
+    def bubbleSort(self):
+        list1=[1,4,2,5,6,7,9];
+        for i in range(0,len(list1)):
+            for j in range(0,len(list1)-1):
+                if list1[j]>list1[j+1]:
+                    c=list1[j];
+                    list1[j]=list1[j+1];
+                    list1[j+1]=c;
+        print(list1);
+        
+    def insertionSort(self):
+        x=[1,4,2,5,6,7,9];
+        for i in range(1,len(x)):
+            c=i;
+            while c>0 and x[c]<x[c-1]:
+                d=x[c];
+                x[c]=x[c-1];
+                x[c-1]=d;
+                c=c-1;
+        print(x)
+
+# fact=programs();
+# print(fact.factorial(5));
+
+# fib=programs();
+# fib.fibonacchi(10)
+
+# sel=programs();
+# sel.selectionSort();
+
+
+# list1=[1,4,2,5,6,7,9];
+# for i in range(0,len(list1)-1):
+#     for j in range(i+1,len(list1)):
+#         if list1[i]>list1[j]:
+#             c=list1[i];
+#             list1[i]=list1[j];
+#             list1[j]=c;
+# print(list1);
+
+# bubble=programs();
+# bubble.bubbleSort();
+
+insertion=programs();
+insertion.insertionSort();
+
+
